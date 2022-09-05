@@ -10,7 +10,7 @@ boolean isCounter = false; // กำหนดให้ isCounter เป็นต
 
 void setup() {
   myservo.attach(9); 
-  pinMode(sensor, INPUT); // กำหนดให้ตัวแปร sensorg เป็นการรับสัญญาณเข้า
+  pinMode(sensor, INPUT); 
   pinMode(led, OUTPUT); // กำหนดให้ตัวแปร led เป็นการส่งออกสัญญาณ
   attachInterrupt(0, doCounter, FALLING); // ทำงานแบบ interrupt เบอร์ 0 ในนี้คือขา 2
   // เมื่อเกิดเหตุการณ์ แรงดันที่ขา 2 มีการเปลี่ยนแปลงจากสัญญาณสูงเป็นต่ำ ให้ทำในฟังก์ชั่น doCounter
